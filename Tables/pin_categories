@@ -1,8 +1,7 @@
-CREATE TABLE `pin_categories` (
-  `pin_id` int NOT NULL,
-  `category_id` int NOT NULL,
-  PRIMARY KEY (`pin_id`,`category_id`),
-  KEY `category_id` (`category_id`),
-  CONSTRAINT `pin_categories_ibfk_1` FOREIGN KEY (`pin_id`) REFERENCES `pins` (`id`),
-  CONSTRAINT `pin_categories_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
-)
+CREATE TABLE pin_categories (
+  pin_id INT,      
+  category_id INT, 
+  PRIMARY KEY (pin_id, category_id),
+  FOREIGN KEY (pin_id) REFERENCES pins(id),
+  FOREIGN KEY (category_id) REFERENCES categories(id)
+);
