@@ -1,0 +1,4 @@
+CREATE TABLE report_reasons (
+  id INT AUTO_INCREMENT PRIMARY KEY,           
+  reason TEXT
+);
